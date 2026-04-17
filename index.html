@@ -6,26 +6,31 @@
 <title>e-Healthy Kids School Project</title>
 
 <style>
-body{margin:0;font-family:Arial;scroll-behavior:smooth;background:#f4f6f9;}
+body{margin:0;font-family:Arial;background:#f4f6f9;scroll-behavior:smooth}
+
+/* Navbar */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#0b3d91;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 padding:15px;
 text-align:center;
 z-index:1000;
 }
 nav a{
-color:#fff;
-margin:0 10px;
+margin:0 15px;
 text-decoration:none;
-font-size:14px;
+color:#333;
+font-weight:bold;
 }
 
+/* Hero */
 header{
-height:400px;
-background:url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+height:450px;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1588072432836-e10032774350');
 background-size:cover;
 color:white;
 display:flex;
@@ -34,16 +39,53 @@ align-items:center;
 text-align:center;
 }
 
+header h1{font-size:45px}
+
+/* Sections */
 section{
-max-width:1000px;
+max-width:1100px;
 margin:80px auto;
 background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-h2{border-left:5px solid #0b3d91;padding-left:10px;}
+h2{
+border-left:5px solid #0b3d91;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* Cards */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fafafa;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px)}
+
+img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+/* Footer */
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+}
 </style>
 
 </head>
@@ -52,7 +94,7 @@ h2{border-left:5px solid #0b3d91;padding-left:10px;}
 
 <nav>
 <a href="#overview">Overview</a>
-<a href="#business">Business</a>
+<a href="#idea">Idea</a>
 <a href="#products">Products</a>
 <a href="#swot">SWOT</a>
 <a href="#market">Market</a>
@@ -60,54 +102,89 @@ h2{border-left:5px solid #0b3d91;padding-left:10px;}
 </nav>
 
 <header>
+<div>
 <h1>e-Healthy Kids School Project (e-HKSP)</h1>
+<p>Integrated School Nutrition & Healthcare System</p>
+</div>
 </header>
 
 <section id="overview">
 <h2>Overview</h2>
 <p>
-An electronic school nutrition and healthcare system that integrates meals, monitoring, and digital services.
+An integrated electronic school nutrition and preventive healthcare system designed to improve children's well-being by combining healthy meals, digital monitoring, and consultation services.
 </p>
 </section>
 
-<section id="business">
-<h2>Business Description</h2>
+<section id="idea">
+<h2>Project Idea</h2>
 <p>
-The project combines e-commerce, logistics, and healthcare services to improve student health.
+The project provides daily healthy meals, digital health profiles, screenings, and awareness programs through a unified digital platform connecting parents, schools, and specialists.
 </p>
 </section>
 
 <section id="products">
-<h2>Products</h2>
-<ul>
-<li>Smart Healthy Meal Program</li>
-<li>Digital Student Health Profile</li>
-<li>Health Screening Service</li>
-<li>Online Consultation</li>
-<li>Awareness Programs</li>
-</ul>
+<h2>Project Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Healthy Meal Program</h3>
+<p>Balanced meals for students</p>
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+</div>
+
+<div class="card">
+<h3>Health Profile</h3>
+<p>Digital student health records</p>
+<img src="https://images.unsplash.com/photo-1581595219319-3d6b1c0c0d1c">
+</div>
+
+<div class="card">
+<h3>Health Screening</h3>
+<p>Periodic health checks</p>
+<img src="https://images.unsplash.com/photo-1580281657527-47d6b6d4b5d0">
+</div>
+
+<div class="card">
+<h3>Consultation</h3>
+<p>Online nutrition advice</p>
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e1d1b0d77">
+</div>
+
+<div class="card">
+<h3>Awareness Programs</h3>
+<p>Educational workshops</p>
+<img src="https://images.unsplash.com/photo-1584697964403-0c1c67f2d7b1">
+</div>
+
+</div>
+
 </section>
 
 <section id="swot">
 <h2>SWOT Analysis</h2>
-<p><b>Strengths:</b> Integrated system</p>
-<p><b>Weaknesses:</b> High cost</p>
-<p><b>Opportunities:</b> Growing awareness</p>
-<p><b>Threats:</b> Competition</p>
+<p><b>Strengths:</b> Integrated system, preventive healthcare</p>
+<p><b>Weaknesses:</b> High cost, complexity</p>
+<p><b>Opportunities:</b> Growing health awareness</p>
+<p><b>Threats:</b> Competition, regulations</p>
 </section>
 
 <section id="market">
 <h2>Market Analysis</h2>
 <p>
-Target: students, parents, schools. Focus on nutrition and preventive healthcare.
+Target customers include students, parents, and schools. The project operates in nutrition, healthcare, and digital services markets.
 </p>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p>Taibah University</p>
+<p>Taibah University - Applied College</p>
 <p>Supervisor: Dr. Dina Gaafar</p>
 </section>
+
+<footer>
+© 2026 e-HKSP Project
+</footer>
 
 </body>
 </html>
