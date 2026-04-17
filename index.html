@@ -3,78 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>e-HKSP</title>
+<title>e-HKSP Project</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:#eef2f7}
+body{font-family:Arial;background:#eef2f7;line-height:1.7}
 
-/* زر القائمة */
-.menu-btn{
-position:fixed;
-top:15px;
-left:15px;
-font-size:26px;
-cursor:pointer;
-z-index:1002;
-background:#0b3d91;
-color:white;
-padding:8px 12px;
-border-radius:8px;
-}
-
-/* overlay */
-.overlay{
-position:fixed;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(5px);
-opacity:0;
-visibility:hidden;
-transition:0.3s;
-z-index:1000;
-}
-
-/* sidebar */
-.sidebar{
-position:fixed;
-left:-260px;
-top:0;
-width:250px;
-height:100%;
-background:#0b3d91;
-padding-top:60px;
-transition:0.3s;
-z-index:1001;
-}
-
-.sidebar a{
-display:block;
-color:white;
-padding:15px;
-text-decoration:none;
-}
-.sidebar a:hover{background:#092c6b}
-
-/* hero */
+/* عنوان */
 header{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
+background:#0b3d91;
 color:white;
-display:flex;
-justify-content:center;
-align-items:center;
 text-align:center;
+padding:40px 20px;
 }
-header h1{font-size:50px}
 
-/* section */
+/* اقسام */
 section{
 max-width:1000px;
-margin:60px auto;
+margin:40px auto;
 background:white;
 padding:30px;
 border-radius:12px;
@@ -84,41 +30,29 @@ box-shadow:0 10px 25px rgba(0,0,0,0.08);
 h2{
 border-left:5px solid #0b3d91;
 padding-left:10px;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
-/* grid */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* خدمات */
+.service{
+margin-bottom:40px;
 }
-
-.card{
-background:#fafafa;
-padding:15px;
-border-radius:10px;
-text-align:center;
-transition:0.3s;
-}
-.card:hover{transform:scale(1.05)}
-
-img{
+.service img{
 width:100%;
-height:200px;
+height:220px;
 object-fit:cover;
 border-radius:10px;
 margin-top:10px;
 }
 
-/* team */
+/* فريق */
 .team{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
 }
 .team div{
-background:#fafafa;
+background:#f4f4f4;
 padding:10px;
 border-radius:10px;
 text-align:center;
@@ -129,123 +63,108 @@ footer{
 background:#0b3d91;
 color:white;
 text-align:center;
-padding:15px;
+padding:20px;
 margin-top:30px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-<div class="sidebar" id="sidebar">
-<a href="#overview">Overview</a>
-<a href="#vision">Vision</a>
-<a href="#services">Services</a>
-<a href="#team">Team</a>
-<a href="#contact">Contact</a>
-</div>
-
 <header>
-<div>
-<h1>e-Healthy Kids School Project</h1>
+<h1>e-Healthy Kids School Project (e-HKSP)</h1>
 <p>Smart School Nutrition & Healthcare System</p>
-</div>
 </header>
 
-<section id="overview">
-<h2>Overview</h2>
-<p>
-A smart digital system that improves children’s health through balanced nutrition, monitoring, and awareness.
-</p>
-</section>
-
-<section id="vision">
+<section>
 <h2>Vision</h2>
-<p>To become a leading digital model in school health.</p>
+<p>
+To become a leading digital model in school health and nutrition by enhancing children’s well-being through smart and sustainable solutions.
+</p>
 
 <h2>Mission</h2>
-<p>Providing smart nutrition and healthcare solutions.</p>
+<p>
+To provide integrated, technology-driven nutrition and preventive healthcare services for students through healthy meals, monitoring, and consultation.
+</p>
 
 <h2>Goals</h2>
 <ul>
-<li>Improve student health</li>
-<li>Reduce unhealthy food</li>
-<li>Enable digital monitoring</li>
+<li>Improve students’ health and nutrition habits</li>
+<li>Reduce unhealthy food consumption</li>
+<li>Provide continuous health monitoring</li>
+<li>Enhance parent communication</li>
+<li>Support digital transformation</li>
 </ul>
 </section>
 
-<section id="services">
-<h2>Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Healthy Meals</h3>
-<img src="https://source.unsplash.com/600x400/?healthy-food">
-</div>
-
-<div class="card">
-<h3>Fresh Fruits</h3>
-<img src="https://source.unsplash.com/600x400/?fruits">
-</div>
-
-<div class="card">
-<h3>Healthy Snacks</h3>
-<img src="https://source.unsplash.com/600x400/?snacks">
-</div>
-
-<div class="card">
-<h3>Lunch Box</h3>
-<img src="https://source.unsplash.com/600x400/?lunchbox">
-</div>
-
-<div class="card">
-<h3>Balanced Diet</h3>
-<img src="https://source.unsplash.com/600x400/?salad">
-</div>
-
-</div>
+<section>
+<h2>Project Idea</h2>
+<p>
+The project aims to create a comprehensive digital system that combines healthy meal services, health monitoring, and awareness programs inside schools. It helps parents track their children’s health and ensures students follow a healthy lifestyle.
+</p>
 </section>
 
-<section id="team">
-<h2>Team</h2>
+<section>
+<h2>Our Services</h2>
+
+<div class="service">
+<h3>1. Healthy Meal Program</h3>
+<p>Daily balanced meals designed for children based on nutritional standards.</p>
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+</div>
+
+<div class="service">
+<h3>2. Digital Health Profile</h3>
+<p>Each student has a digital record including BMI and health data.</p>
+<img src="https://images.unsplash.com/photo-1581595219319-3d6b1c0c0d1c">
+</div>
+
+<div class="service">
+<h3>3. Health Screening</h3>
+<p>Periodic health checks inside schools to detect risks early.</p>
+<img src="https://images.unsplash.com/photo-1580281657527-47d6b6d4b5d0">
+</div>
+
+<div class="service">
+<h3>4. Nutrition Consultation</h3>
+<p>Online consultation services for parents with specialists.</p>
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e1d1b0d77">
+</div>
+
+<div class="service">
+<h3>5. Awareness Programs</h3>
+<p>Workshops to educate students about healthy eating habits.</p>
+<img src="https://images.unsplash.com/photo-1584697964403-0c1c67f2d7b1">
+</div>
+
+</section>
+
+<section>
+<h2>Project Team</h2>
 <div class="team">
 <div>Razan</div>
 <div>Najoud</div>
 <div>Amal</div>
 <div>Murad</div>
 <div>Najla</div>
+<div>Wurood</div>
+<div>Samia</div>
+<div>Haya</div>
+<div>Al-Hanouf</div>
 </div>
 </section>
 
-<section id="contact">
+<section>
 <h2>Contact</h2>
-<p>Taibah University</p>
+<p>Taibah University - Applied College</p>
+<p>Email: info@ehksp.com</p>
+<p>Phone: +966000000000</p>
 </section>
 
 <footer>
-© 2026 e-HKSP
+© 2026 e-HKSP Project
 </footer>
-
-<script>
-function toggleMenu(){
-let sidebar = document.getElementById("sidebar");
-let overlay = document.getElementById("overlay");
-
-if(sidebar.style.left === "0px"){
-sidebar.style.left = "-260px";
-overlay.style.opacity = "0";
-overlay.style.visibility = "hidden";
-}else{
-sidebar.style.left = "0";
-overlay.style.opacity = "1";
-overlay.style.visibility = "visible";
-}
-}
-</script>
 
 </body>
 </html>
