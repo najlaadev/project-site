@@ -7,11 +7,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:Arial;
-background:#eef2f7;
-scroll-behavior:smooth;
-}
+body{font-family:Arial;background:#eef2f7}
 
 /* زر القائمة */
 .menu-btn{
@@ -27,7 +23,7 @@ padding:8px 12px;
 border-radius:8px;
 }
 
-/* خلفية بلور */
+/* overlay */
 .overlay{
 position:fixed;
 width:100%;
@@ -40,19 +36,17 @@ transition:0.3s;
 z-index:1000;
 }
 
-/* Sidebar */
+/* sidebar */
 .sidebar{
 position:fixed;
-left:-270px;
+left:-260px;
 top:0;
-width:260px;
+width:250px;
 height:100%;
-background:rgba(11,61,145,0.95);
-backdrop-filter:blur(10px);
+background:#0b3d91;
 padding-top:60px;
-transition:0.4s;
+transition:0.3s;
 z-index:1001;
-box-shadow:5px 0 20px rgba(0,0,0,0.2);
 }
 
 .sidebar a{
@@ -60,24 +54,14 @@ display:block;
 color:white;
 padding:15px;
 text-decoration:none;
-font-size:18px;
-transition:0.3s;
 }
-.sidebar a:hover{
-background:rgba(255,255,255,0.1);
-padding-left:25px;
-}
+.sidebar a:hover{background:#092c6b}
 
-/* محتوى */
-.content{
-transition:0.3s;
-}
-
-/* Hero */
+/* hero */
 header{
-height:100vh;
+height:90vh;
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=1600&q=80');
+url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 color:white;
 display:flex;
@@ -85,35 +69,25 @@ justify-content:center;
 align-items:center;
 text-align:center;
 }
-header h1{
-font-size:60px;
-letter-spacing:1px;
-}
+header h1{font-size:50px}
 
-/* Sections */
+/* section */
 section{
-max-width:1100px;
-margin:80px auto;
-background:rgba(255,255,255,0.9);
-padding:40px;
-border-radius:15px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-transform:translateY(50px);
-opacity:0;
-transition:1s;
-}
-section.show{
-transform:translateY(0);
-opacity:1;
+max-width:1000px;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 h2{
-border-left:6px solid #0b3d91;
+border-left:5px solid #0b3d91;
 padding-left:10px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-/* Grid */
+/* grid */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -121,16 +95,13 @@ gap:20px;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:12px;
+background:#fafafa;
+padding:15px;
+border-radius:10px;
 text-align:center;
-transition:0.4s;
+transition:0.3s;
 }
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
+.card:hover{transform:scale(1.05)}
 
 img{
 width:100%;
@@ -140,50 +111,33 @@ border-radius:10px;
 margin-top:10px;
 }
 
-/* Team */
+/* team */
 .team{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
 }
 .team div{
-background:white;
-padding:15px;
+background:#fafafa;
+padding:10px;
 border-radius:10px;
 text-align:center;
-transition:0.3s;
-}
-.team div:hover{
-transform:scale(1.05);
 }
 
-/* Footer */
+/* footer */
 footer{
 background:#0b3d91;
 color:white;
 text-align:center;
-padding:20px;
+padding:15px;
+margin-top:30px;
 }
-
-/* Button */
-.btn{
-display:inline-block;
-background:#0b3d91;
-color:white;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-margin-top:10px;
-transition:0.3s;
-}
-.btn:hover{background:#082a6d}
 </style>
 </head>
 
 <body>
 
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
 <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <div class="sidebar" id="sidebar">
@@ -194,8 +148,6 @@ transition:0.3s;
 <a href="#contact">Contact</a>
 </div>
 
-<div class="content">
-
 <header>
 <div>
 <h1>e-Healthy Kids School Project</h1>
@@ -203,52 +155,63 @@ transition:0.3s;
 </div>
 </header>
 
-<section>
-<h2 id="overview">Overview</h2>
+<section id="overview">
+<h2>Overview</h2>
 <p>
-An advanced digital system that integrates healthy meals, monitoring, and healthcare services for students.
+A smart digital system that improves children’s health through balanced nutrition, monitoring, and awareness.
 </p>
 </section>
 
-<section>
-<h2 id="vision">Vision</h2>
-<p>To lead digital school healthcare transformation.</p>
+<section id="vision">
+<h2>Vision</h2>
+<p>To become a leading digital model in school health.</p>
 
 <h2>Mission</h2>
-<p>Providing smart nutrition solutions using technology.</p>
+<p>Providing smart nutrition and healthcare solutions.</p>
 
 <h2>Goals</h2>
 <ul>
 <li>Improve student health</li>
-<li>Reduce unhealthy habits</li>
-<li>Enable monitoring systems</li>
+<li>Reduce unhealthy food</li>
+<li>Enable digital monitoring</li>
 </ul>
 </section>
 
-<section>
-<h2 id="services">Services</h2>
+<section id="services">
+<h2>Services</h2>
 
 <div class="grid">
+
 <div class="card">
 <h3>Healthy Meals</h3>
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<img src="https://source.unsplash.com/600x400/?healthy-food">
 </div>
 
 <div class="card">
-<h3>Fruits</h3>
-<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce">
+<h3>Fresh Fruits</h3>
+<img src="https://source.unsplash.com/600x400/?fruits">
 </div>
 
 <div class="card">
-<h3>Snacks</h3>
-<img src="https://images.unsplash.com/photo-1604908554168-6e8f7cbb0a32">
-</div>
+<h3>Healthy Snacks</h3>
+<img src="https://source.unsplash.com/600x400/?snacks">
 </div>
 
+<div class="card">
+<h3>Lunch Box</h3>
+<img src="https://source.unsplash.com/600x400/?lunchbox">
+</div>
+
+<div class="card">
+<h3>Balanced Diet</h3>
+<img src="https://source.unsplash.com/600x400/?salad">
+</div>
+
+</div>
 </section>
 
-<section>
-<h2 id="team">Team</h2>
+<section id="team">
+<h2>Team</h2>
 <div class="team">
 <div>Razan</div>
 <div>Najoud</div>
@@ -258,27 +221,22 @@ An advanced digital system that integrates healthy meals, monitoring, and health
 </div>
 </section>
 
-<section>
-<h2 id="contact">Contact</h2>
+<section id="contact">
+<h2>Contact</h2>
 <p>Taibah University</p>
-<a class="btn" href="#">View Project</a>
 </section>
 
 <footer>
 © 2026 e-HKSP
 </footer>
 
-</div>
-
 <script>
-
-/* Sidebar */
 function toggleMenu(){
 let sidebar = document.getElementById("sidebar");
 let overlay = document.getElementById("overlay");
 
 if(sidebar.style.left === "0px"){
-sidebar.style.left = "-270px";
+sidebar.style.left = "-260px";
 overlay.style.opacity = "0";
 overlay.style.visibility = "hidden";
 }else{
@@ -287,18 +245,6 @@ overlay.style.opacity = "1";
 overlay.style.visibility = "visible";
 }
 }
-
-/* Scroll Animation */
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", ()=>{
-sections.forEach(sec=>{
-let top = window.scrollY;
-let offset = sec.offsetTop - 400;
-if(top > offset){
-sec.classList.add("show");
-}
-});
-});
 </script>
 
 </body>
