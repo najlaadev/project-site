@@ -7,48 +7,84 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:#f4f6f9}
+body{font-family:Arial;background:#f4f6f9;scroll-behavior:smooth}
 
 /* Navbar */
 nav{
+position:fixed;
+top:0;
+width:100%;
 background:white;
+display:flex;
+justify-content:center;
+gap:25px;
 padding:15px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
+z-index:1000;
 }
 nav a{
-margin:0 10px;
-cursor:pointer;
+text-decoration:none;
+color:#333;
 font-weight:bold;
+transition:0.3s;
 }
+nav a:hover{color:#0b3d91}
 
-/* Pages */
-.page{
-display:none;
+/* Hero */
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+header h1{font-size:60px}
+header p{font-size:20px;margin-top:10px}
+
+/* Section */
+section{
+max-width:1100px;
+margin:80px auto;
 padding:40px;
-max-width:1000px;
-margin:40px auto;
 background:white;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+opacity:0;
+transform:translateY(50px);
+transition:1s;
 }
-.active{display:block}
+section.show{
+opacity:1;
+transform:translateY(0);
+}
 
-/* Grid */
+h2{
+border-left:6px solid #0b3d91;
+padding-left:10px;
+margin-bottom:15px;
+}
+
+/* Cards */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
-
 .card{
 background:#fafafa;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
-cursor:pointer;
+transition:0.4s;
 }
-.card:hover{transform:scale(1.05)}
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
 
 img{
 width:100%;
@@ -58,110 +94,171 @@ border-radius:10px;
 margin-top:10px;
 }
 
-button{
+/* Team */
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+.team div{
+background:#fafafa;
+padding:15px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+.team div:hover{transform:scale(1.05)}
+
+/* Button */
+.btn{
+display:inline-block;
 background:#0b3d91;
 color:white;
-padding:10px 20px;
-border:none;
-border-radius:6px;
-cursor:pointer;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
 margin-top:15px;
+transition:0.3s;
+}
+.btn:hover{background:#092c6b}
+
+/* Footer */
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Counter */
+.counter{
+font-size:35px;
+font-weight:bold;
+color:#0b3d91;
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<a onclick="showPage('home')">Home</a>
-<a onclick="showPage('meals')">Meals</a>
-<a onclick="showPage('fruits')">Fruits</a>
-<a onclick="showPage('snacks')">Snacks</a>
-<a onclick="showPage('diet')">Diet</a>
-<a onclick="showPage('lunch')">Lunch</a>
+<a href="#overview">Overview</a>
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#services">Services</a>
+<a href="#impact">Impact</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<!-- الصفحة الرئيسية -->
-<div id="home" class="page active">
-<h1>e-Healthy Kids School Project</h1>
+<header>
+<div>
+<h1>e-HKSP Project</h1>
+<p>Smart School Nutrition & Healthcare System</p>
+</div>
+</header>
+
+<section>
+<h2 id="overview">Overview</h2>
+<p>
+A digital platform transforming school nutrition and healthcare through integrated smart services.
+</p>
+</section>
+
+<section>
+<h2 id="problem">The Problem</h2>
+<p>
+Children suffer from unhealthy eating, obesity, and lack of monitoring systems in schools.
+</p>
+</section>
+
+<section>
+<h2 id="solution">Our Solution</h2>
+<p>
+Healthy meals + digital health tracking + consultation = complete system.
+</p>
+</section>
+
+<section>
+<h2 id="services">Services</h2>
 
 <div class="grid">
-
-<div class="card" onclick="showPage('meals')">
+<div class="card">
 <h3>Healthy Meals</h3>
-<img src="https://picsum.photos/id/1080/400/300">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
 </div>
 
-<div class="card" onclick="showPage('fruits')">
-<h3>Fresh Fruits</h3>
-<img src="https://picsum.photos/id/292/400/300">
+<div class="card">
+<h3>Health Monitoring</h3>
+<img src="https://images.unsplash.com/photo-1581595219319-3d6b1c0c0d1c">
 </div>
 
-<div class="card" onclick="showPage('snacks')">
-<h3>Healthy Snacks</h3>
-<img src="https://picsum.photos/id/431/400/300">
-</div>
-
-<div class="card" onclick="showPage('diet')">
-<h3>Balanced Diet</h3>
-<img src="https://picsum.photos/id/433/400/300">
-</div>
-
-<div class="card" onclick="showPage('lunch')">
-<h3>Lunch Box</h3>
-<img src="https://picsum.photos/id/292/401/300">
-</div>
-
+<div class="card">
+<h3>Consultation</h3>
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e1d1b0d77">
 </div>
 </div>
 
-<!-- صفحة Meals -->
-<div id="meals" class="page">
-<h2>Healthy Meals</h2>
-<p>Balanced meals designed for children.</p>
-<img src="https://picsum.photos/id/1080/800/400">
-<button onclick="showPage('home')">Back</button>
+</section>
+
+<section>
+<h2 id="impact">Impact</h2>
+<p>
+Improves children health and supports national healthcare goals.
+</p>
+
+<div class="counter" id="counter">0</div>
+<p>Students Impacted</p>
+</section>
+
+<section>
+<h2 id="team">Team</h2>
+
+<div class="team">
+<div>Razan</div>
+<div>Najoud</div>
+<div>Amal</div>
+<div>Murad</div>
+<div>Najla</div>
 </div>
 
-<!-- صفحة Fruits -->
-<div id="fruits" class="page">
-<h2>Fresh Fruits</h2>
-<p>Fresh fruits to support healthy growth.</p>
-<img src="https://picsum.photos/id/292/800/400">
-<button onclick="showPage('home')">Back</button>
-</div>
+</section>
 
-<!-- صفحة Snacks -->
-<div id="snacks" class="page">
-<h2>Healthy Snacks</h2>
-<p>Healthy snacks instead of junk food.</p>
-<img src="https://picsum.photos/id/431/800/400">
-<button onclick="showPage('home')">Back</button>
-</div>
+<section>
+<h2 id="contact">Contact</h2>
+<p>Taibah University</p>
+<a class="btn" href="#">Download Project</a>
+</section>
 
-<!-- صفحة Diet -->
-<div id="diet" class="page">
-<h2>Balanced Diet</h2>
-<p>Complete nutrition plan for students.</p>
-<img src="https://picsum.photos/id/433/800/400">
-<button onclick="showPage('home')">Back</button>
-</div>
-
-<!-- صفحة Lunch -->
-<div id="lunch" class="page">
-<h2>Lunch Box</h2>
-<p>Healthy school lunch box ideas.</p>
-<img src="https://picsum.photos/id/292/800/401">
-<button onclick="showPage('home')">Back</button>
-</div>
+<footer>
+© 2026 e-HKSP
+</footer>
 
 <script>
-function showPage(pageId){
-let pages=document.querySelectorAll('.page');
-pages.forEach(p=>p.classList.remove('active'));
-document.getElementById(pageId).classList.add('active');
+
+/* Scroll Animation */
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+sections.forEach(sec=>{
+const top = window.scrollY;
+const offset = sec.offsetTop - 400;
+if(top > offset){
+sec.classList.add("show");
 }
+});
+});
+
+/* Counter */
+let count = 0;
+let counter = document.getElementById("counter");
+
+setInterval(()=>{
+if(count < 500){
+count += 5;
+counter.innerText = count;
+}
+},30);
+
 </script>
 
 </body>
