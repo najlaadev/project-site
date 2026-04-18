@@ -15,25 +15,22 @@ position:fixed;
 top:0;
 width:100%;
 background:white;
-display:flex;
-justify-content:center;
-gap:25px;
 padding:15px;
-box-shadow:0 2px 15px rgba(0,0,0,0.1);
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 z-index:1000;
 }
 nav a{
+margin:0 12px;
 text-decoration:none;
 color:#333;
 font-weight:bold;
-transition:0.3s;
 }
-nav a:hover{color:#0b3d91}
 
 /* Hero */
 header{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 color:white;
@@ -42,24 +39,16 @@ justify-content:center;
 align-items:center;
 text-align:center;
 }
-header h1{font-size:60px}
-header p{font-size:20px;margin-top:10px}
+header h1{font-size:55px}
 
-/* Section */
+/* Sections */
 section{
 max-width:1100px;
 margin:80px auto;
-padding:40px;
 background:white;
-border-radius:15px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-section.show{
-opacity:1;
-transform:translateY(0);
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 h2{
@@ -68,23 +57,21 @@ padding-left:10px;
 margin-bottom:15px;
 }
 
-/* Cards */
+/* Grid */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
+
 .card{
 background:#fafafa;
 padding:20px;
-border-radius:12px;
+border-radius:10px;
 text-align:center;
-transition:0.4s;
+transition:0.3s;
 }
-.card:hover{
-transform:scale(1.05);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
+.card:hover{transform:translateY(-10px)}
 
 img{
 width:100%;
@@ -93,6 +80,9 @@ object-fit:cover;
 border-radius:10px;
 margin-top:10px;
 }
+
+/* List */
+ul{margin-top:10px;padding-left:20px}
 
 /* Team */
 .team{
@@ -105,9 +95,7 @@ background:#fafafa;
 padding:15px;
 border-radius:10px;
 text-align:center;
-transition:0.3s;
 }
-.team div:hover{transform:scale(1.05)}
 
 /* Button */
 .btn{
@@ -117,10 +105,8 @@ color:white;
 padding:12px 25px;
 border-radius:8px;
 text-decoration:none;
-margin-top:15px;
-transition:0.3s;
+margin-top:10px;
 }
-.btn:hover{background:#092c6b}
 
 /* Footer */
 footer{
@@ -129,137 +115,116 @@ color:white;
 text-align:center;
 padding:20px;
 }
-
-/* Counter */
-.counter{
-font-size:35px;
-font-weight:bold;
-color:#0b3d91;
-}
 </style>
+
 </head>
 
 <body>
 
 <nav>
 <a href="#overview">Overview</a>
-<a href="#problem">Problem</a>
-<a href="#solution">Solution</a>
+<a href="#vision">Vision</a>
 <a href="#services">Services</a>
-<a href="#impact">Impact</a>
 <a href="#team">Team</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <header>
 <div>
-<h1>e-HKSP Project</h1>
+<h1>e-Healthy Kids School Project</h1>
 <p>Smart School Nutrition & Healthcare System</p>
 </div>
 </header>
 
-<section>
-<h2 id="overview">Overview</h2>
+<section id="overview">
+<h2>Overview</h2>
 <p>
-A digital platform transforming school nutrition and healthcare through integrated smart services.
+The e-HKSP project is an integrated digital system designed to improve children’s health through balanced meals, health monitoring, and consultation services within schools.
 </p>
 </section>
 
-<section>
-<h2 id="problem">The Problem</h2>
+<section id="vision">
+<h2>Vision</h2>
 <p>
-Children suffer from unhealthy eating, obesity, and lack of monitoring systems in schools.
+To become a leading digital model in school health and nutrition by enhancing children’s well-being through smart and sustainable solutions.
 </p>
+
+<h2>Mission</h2>
+<p>
+To provide integrated, technology-driven nutrition and preventive healthcare services for students by combining healthy meals, monitoring systems, and consultation.
+</p>
+
+<h2>Project Goals</h2>
+<ul>
+<li>Improve students’ health and eating habits</li>
+<li>Reduce unhealthy food consumption</li>
+<li>Provide continuous health monitoring</li>
+<li>Enhance communication with parents</li>
+<li>Support digital transformation</li>
+</ul>
 </section>
 
-<section>
-<h2 id="solution">Our Solution</h2>
-<p>
-Healthy meals + digital health tracking + consultation = complete system.
-</p>
-</section>
-
-<section>
-<h2 id="services">Services</h2>
+<section id="services">
+<h2>Healthy Services</h2>
 
 <div class="grid">
+
 <div class="card">
 <h3>Healthy Meals</h3>
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80">
 </div>
 
 <div class="card">
-<h3>Health Monitoring</h3>
-<img src="https://images.unsplash.com/photo-1581595219319-3d6b1c0c0d1c">
+<h3>Fresh Fruits</h3>
+<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80">
 </div>
 
 <div class="card">
-<h3>Consultation</h3>
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e1d1b0d77">
-</div>
+<h3>Healthy Snacks</h3>
+<img src="https://images.unsplash.com/photo-1604908554168-6e8f7cbb0a32?auto=format&fit=crop&w=800&q=80">
 </div>
 
+<div class="card">
+<h3>Balanced Diet</h3>
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<div class="card">
+<h3>School Lunch Box</h3>
+<img src="https://images.unsplash.com/photo-1604908176997-4317c84b68f1?auto=format&fit=crop&w=800&q=80">
+</div>
+
+</div>
 </section>
 
-<section>
-<h2 id="impact">Impact</h2>
-<p>
-Improves children health and supports national healthcare goals.
-</p>
-
-<div class="counter" id="counter">0</div>
-<p>Students Impacted</p>
-</section>
-
-<section>
-<h2 id="team">Team</h2>
+<section id="team">
+<h2>Project Team</h2>
 
 <div class="team">
-<div>Razan</div>
-<div>Najoud</div>
-<div>Amal</div>
-<div>Murad</div>
-<div>Najla</div>
+<div>Razan Al-Rashidi</div>
+<div>Najoud Al-Azmi</div>
+<div>Amal Al-Rashidi</div>
+<div>Murad Al-Anzi</div>
+<div>Najla Al-Rashidi</div>
+<div>Wurood Al-Rashidi</div>
+<div>Samia Al-Rashidi</div>
+<div>Haya Al-Rashidi</div>
+<div>Al-Hanouf Al-Rashidi</div>
 </div>
 
 </section>
 
-<section>
-<h2 id="contact">Contact</h2>
-<p>Taibah University</p>
+<section id="contact">
+<h2>Contact</h2>
+<p>Taibah University - Applied College</p>
+<p>Supervisor: Dr. Dina Gaafar</p>
+
 <a class="btn" href="#">Download Project</a>
 </section>
 
 <footer>
-© 2026 e-HKSP
+© 2026 e-HKSP Project
 </footer>
-
-<script>
-
-/* Scroll Animation */
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-sections.forEach(sec=>{
-const top = window.scrollY;
-const offset = sec.offsetTop - 400;
-if(top > offset){
-sec.classList.add("show");
-}
-});
-});
-
-/* Counter */
-let count = 0;
-let counter = document.getElementById("counter");
-
-setInterval(()=>{
-if(count < 500){
-count += 5;
-counter.innerText = count;
-}
-},30);
-
-</script>
 
 </body>
 </html>
